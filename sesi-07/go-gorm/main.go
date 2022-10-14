@@ -13,11 +13,11 @@ func main() {
 	database.StartDB()
 
 	// createUser("johndoe@gmail.com")
-	// getUserById(1)
-	// updateUserById(1, "johnjohn@gmail.com")
-	// createProduct(1, "YLO", "YYYY")
+	// getUserById(2)
+	// updateUserById(2, "johncena@gmail.com")
+	// createProduct(2, "YLO", "YYYY")
 	// getUsersWithProducts()
-	deleteProductById(1)
+	deleteProductById(2)
 }
 
 func createUser(email string) {
