@@ -1,0 +1,107 @@
+{
+	"info": {
+		"_postman_id": "12674503-e997-46d9-8917-f672efc601e1",
+		"name": "assignment-02",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23755207"
+	},
+	"item": [
+		{
+			"name": "Order",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"orderedAt\":\"2019-11-09T21:21:46+00:00\",\r\n    \"customerName\":\"Tom Jerry\",\r\n    \"items\":[\r\n        {\r\n            \"itemCode\":\"123\",\r\n            \"description\":\"IPhone 10x\",\r\n            \"quantity\":1\r\n        }\r\n    ]\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/order",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Orders",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Order",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customerName\":\"Spyke Tyke\",\r\n    \"orderedAt\":\"2019-11-09T21:21:46Z\",\r\n    \"items\":[\r\n        {\r\n            \"lineItemId\":1,\r\n            \"itemCode\":\"123\",\r\n            \"description\":\"IPhone 10x\",\r\n            \"quantity\":10\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/order/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"order",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Order",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/order/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"order",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
