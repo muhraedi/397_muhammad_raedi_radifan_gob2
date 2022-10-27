@@ -8,7 +8,7 @@ type Order struct {
 	ID           int       `json:"orderId" gorm:"primaryKey;autoIncrement"`
 	CustomerName string    `json:"customerName"`
 	OrderedAt    time.Time `json:"orderedAt"`
-	Items        []Item    `json:"items" gorm:"foreignKey:OrderID;references:ID"`
+	Items        []Item    `json:"items" gorm:"foreignKey:OrderID;references:ID;OnUpdate:CASCADE,OnDelete:SET NULL;"`
 }
 
 type Item struct {
